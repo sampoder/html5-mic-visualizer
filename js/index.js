@@ -60,7 +60,6 @@ window.onload = function () {
                 var rms = Math.sqrt(total / bufferLength);
                 var db = 20 * ( Math.log(rms) / Math.log(10) );
                 db = Math.max(db, 0); // sanity check
-                h.innerHTML = Math.floor(db) + " dB";
     
                 if (db >= loud_volume_threshold) {
                     seconds += 0.5;
