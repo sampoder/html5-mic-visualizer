@@ -60,11 +60,12 @@ window.onload = function () {
                 var rms = Math.sqrt(total / bufferLength);
                 var db = 20 * ( Math.log(rms) / Math.log(10) );
                 db = Math.max(db, 0); // sanity check
-    
+                h.innerHTML = ""
+                button.style.display = "none"
                 if (db >= loud_volume_threshold) {
                     seconds += 0.5;
                     if (seconds >= 5) {
-                        hSub.innerHTML = "You’ve been in loud environment for<span> " + Math.floor(seconds) + " </span>seconds." ;
+                        hSub.innerHTML = "" ;
                     }
                 }
                 else {
